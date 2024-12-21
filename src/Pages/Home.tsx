@@ -5,15 +5,15 @@ import {
   MagnifyingGlassIcon,
   PlusIcon,
 } from "@heroicons/react/24/outline";
-import { DataMock } from "../../data.ts";
+import { DataRepo } from "../../data.ts";
 import { ChangeEvent, useState } from "react";
 
 const Home = () => {
-  const [filteredData, setFilteredData] = useState(DataMock);
+  const [filteredData, setFilteredData] = useState(DataRepo);
 
   const handleFilter = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    const filtered = DataMock.filter(
+    const filtered = DataRepo.filter(
       (item) =>
         item.title.toLowerCase().includes(value.toLowerCase()) ||
         item.language.toLowerCase().includes(value.toLowerCase())
@@ -25,6 +25,9 @@ const Home = () => {
     <Layout>
       <div className="p-4">
         <div className="bg-white rounded-xl border shadow-sm flex flex-col">
+
+
+
           {/* Header Section */}
           <div className="border-b p-6 space-y-4">
             <div className="flex justify-between items-center flex-wrap gap-4">
@@ -53,6 +56,8 @@ const Home = () => {
               />
             </div>
           </div>
+          
+
 
           {/* Repository List */}
           <div className="flex flex-col">
@@ -89,6 +94,8 @@ const Home = () => {
               </div>
             )}
           </div>
+
+
         </div>
       </div>
     </Layout>

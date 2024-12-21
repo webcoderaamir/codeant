@@ -1,4 +1,4 @@
-export const DataMock = [
+export const DataRepo = [
     {
         title: 'design-system',
         type: 'Public',

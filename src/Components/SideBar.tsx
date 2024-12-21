@@ -31,6 +31,8 @@ import {
   
     return (
       <div className="flex flex-col w-full md:w-64 bg-white md:h-screen border-r shadow-lg relative">
+
+        
         {/* Header */}
         <div className="flex justify-between items-center px-4 py-4 border-b">
           <div className="flex items-center gap-3">
@@ -44,6 +46,8 @@ import {
             <Bars3Icon className="w-6 h-6" />
           </button>
         </div>
+
+
   
         {/* Sidebar Menu */}
         <div
@@ -54,7 +58,12 @@ import {
             height: isMobile ? (isSideBarVisible ? "calc(100vh - 64px)" : "0px") : "100%",
           }}
         >
+
+
           <div className="flex flex-col h-full">
+
+
+
             {/* User Info */}
             <div className="flex flex-col items-center py-6 border-b">
               <span className="flex items-center gap-2 px-4 py-2 border rounded-full text-sm font-medium text-gray-600">
@@ -62,6 +71,8 @@ import {
                 <ChevronDownIcon className="w-5 h-5" />
               </span>
             </div>
+
+
   
             {/* Navigation Links */}
             <nav className="flex-1 px-4 py-4 space-y-2">
@@ -82,6 +93,7 @@ import {
                 </a>
               ))}
             </nav>
+
   
             {/* Footer Links */}
             <div className="px-4 py-4 border-t">
@@ -100,7 +112,11 @@ import {
                 <span>Logout</span>
               </a>
             </div>
+
+
           </div>
+
+
         </div>
       </div>
     );
